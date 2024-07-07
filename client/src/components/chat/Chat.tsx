@@ -17,7 +17,7 @@ const Chat = () => {
   const socketRef = useRef<Socket | null>(null);
 
   useEffect(() => {
-    const socket = io('https://hospital-bot.azurewebsites.net');
+    const socket = io('https://chatbot-hospital-app.azurewebsites.net');
     socketRef.current = socket;
 
     const handleBotMessage = (response: string) => {
