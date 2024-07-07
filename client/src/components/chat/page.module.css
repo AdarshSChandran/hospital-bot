@@ -1,0 +1,88 @@
+.chatContainer {
+  /* background-color: white; */
+  /* padding: 30px 0px; */
+  width: 50%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Media query for screens below 1000px */
+@media (max-width: 1000px) {
+  .chatContainer {
+    width: 80%;
+  }
+}
+
+/* Media query for screens below 800px */
+@media (max-width: 800px) {
+  .chatContainer {
+    width: 90%;
+  }
+}
+
+.chatViewArea {
+  padding: 30px 0px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+  /* overflow-y: scroll; */
+}
+
+.bot {
+  align-self: flex-start;
+  margin-left: 20px;
+  max-width: 70%;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #e91e63;
+  color: #fff;
+  border-top-left-radius: 0;
+  /* border: 1px solid white; */
+}
+
+.user {
+  align-self: flex-end;
+
+  max-width: 70%;
+  padding: 10px 20px;
+  margin-right: 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #fff;
+  color: #000;
+  border-top-right-radius: 0;
+  /* border: 1px solid #e91e63 ; */
+}
+/* 
+.chatBoxContainer{
+    overflow: hidden;
+    height: 60px;
+    border: 1px solid aquamarine;
+
+} */
+
+.chatBox {
+  position: fixed;
+  bottom: 10px;
+  width: 60%;
+  /* height: auto; */
+  z-index: 10000;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid white; */
+}
+
+.iconStyle {
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+}

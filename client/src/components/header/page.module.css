@@ -1,0 +1,26 @@
+.headerSection {
+  display: flex;
+  justify-content: space-between; /* Distributes space between elements */
+  align-items: center;
+  width: 100%; /* Full width */
+  height: 120px; /* Adjust height as needed */
+  color: azure;
+  font-size: 1.2rem;
+  /* border: 1px solid white; */
+  background-color: #162739; 
+  padding: 0 20px; /* Add padding to the left and right */
+}
+
+.headerTitle {
+  margin: 0 auto; /* Center the title by giving it auto margins */
+  text-align: center; /* Optional: Center text within the h2 */
+}
+
+.backButton {
+  display: flex;
+  align-items: end;
+  /* border: 1px solid white; */
+  /* justify-content: center; */
+  cursor: pointer; /* Pointer cursor for better UX */
+  color: #DE2E7D; /* Same color as the span in title for consistency */
+}

@@ -1,0 +1,268 @@
+{
+  "intents": [
+    {
+      "intent_name": "start",
+      "keywords": [
+        "hello",
+        "Hello",
+        "hi",
+        "Hi",
+        "hey",
+        "Hey",
+        "yes",
+        "Yes",
+        "yeah",
+        "Yeah",
+        "yep",
+        "Yep",
+        "sure",
+        "Sure",
+        "ok",
+        "Ok",
+        "okay",
+        "Okay",
+        "please",
+        "Please",
+        "book",
+        "Book",
+        "appointment",
+        "Appointment",
+        "schedule",
+        "Schedule",
+        "help",
+        "Help",
+        "assist",
+        "Assist",
+        "need",
+        "Need",
+        "want",
+        "Want",
+        "hi there",
+        "Hi there",
+        "good morning",
+        "Good morning",
+        "good afternoon",
+        "Good afternoon",
+        "good evening",
+        "Good evening",
+        "book an appointment",
+        "Book an appointment",
+        "make an appointment",
+        "Make an appointment"
+      ],
+      "answers": [
+        "Hello! Do you want to book an appointment for you or a family member?"
+      ],
+      "next_expectation": "book_appointment"
+    },
+    {
+      "intent_name": "book_appointment",
+      "keywords": [
+        "book",
+        "appointment",
+        "schedule",
+        "yes",
+        "yeah",
+        "yea",
+        "ja",
+        "yep",
+        "y",
+        "ok",
+        "okay",
+        "please",
+        "want",
+        "need",
+        "make appointment",
+        "arrange",
+        "plan"
+      ],
+      "answers": ["Please enter the patient's full name :)"],
+      "next_expectation": "p_name"
+    },
+    {
+      "intent_name": "p_name",
+      "keywords": [],
+      "answers": ["Please enter the patient's age :)"],
+      "next_expectation": "p_age"
+    },
+    {
+      "intent_name": "p_age",
+      "keywords": [],
+      "answers": ["Please enter the patient's sex (male, female, other) :)"],
+      "next_expectation": "p_sex"
+    },
+    {
+      "intent_name": "p_sex",
+      "keywords": [
+        "male",
+        "female",
+        "other",
+        "m",
+        "f",
+        "gender",
+        "sex",
+        "man",
+        "woman"
+      ],
+      "answers": [
+        "When do you want to book the appointment? Mention the date in YYYY-MM-DD format :)"
+      ],
+      "next_expectation": "date"
+    },
+    {
+      "intent_name": "date",
+      "keywords": [],
+      "answers": [
+        "What time do you want to book the appointment? Mention the time in HH:MM format :)"
+      ],
+      "next_expectation": "time"
+    },
+    {
+      "intent_name": "time",
+      "keywords": [],
+      "answers": ["Is the patient a resident of Munich? (yes/no)"],
+      "next_expectation": "resident_munich"
+    },
+    {
+      "intent_name": "resident_munich",
+      "keywords": [
+        "yes",
+        "no",
+        "y",
+        "n",
+        "resident",
+        "live",
+        "living",
+        "munich",
+        "city",
+        "local",
+        "from munich"
+      ],
+      "answers": ["Is the patient disabled? (yes/no)"],
+      "next_expectation": "disabled"
+    },
+    {
+      "intent_name": "disabled",
+      "keywords": [
+        "yes",
+        "no",
+        "y",
+        "n",
+        "disabled",
+        "disability",
+        "handicap",
+        "impairment"
+      ],
+      "answers": [
+        "Is the patient a member or known to anyone in Munich City Hospital Staff Association? (yes/no)"
+      ],
+      "next_expectation": "hospital_staff_association"
+    },
+    {
+      "intent_name": "hospital_staff_association",
+      "keywords": [
+        "yes",
+        "no",
+        "y",
+        "n",
+        "member",
+        "staff",
+        "association",
+        "hospital staff",
+        "hospital association"
+      ],
+      "answers": ["Does patient have any health insurance coverage? (yes/no)"],
+      "next_expectation": "insurance"
+    },
+    {
+      "intent_name": "insurance",
+      "keywords": [
+        "yes",
+        "no",
+        "y",
+        "n",
+        "insurance",
+        "health insurance",
+        "coverage",
+        "insured"
+      ],
+      "answers": [
+        "What type of insurance do patient have? (Public/Private/others)"
+      ],
+      "next_expectation": "insurance_type"
+    },
+    {
+      "intent_name": "insurance_type",
+      "keywords": [
+        "public",
+        "private",
+        "others",
+        "insurance type",
+        "type of insurance",
+        "public insurance",
+        "private insurance",
+        "other insurance"
+      ],
+      "answers": ["Please enter your email id?"],
+      "next_expectation": "email"
+    },
+    {
+      "intent_name": "email",
+      "keywords": [],
+      "answers": ["Do you want a reminder before the appointment? (yes/no)"],
+      "next_expectation": "reminder"
+    },
+    {
+      "intent_name": "reminder",
+      "keywords": [
+        "yes",
+        "no",
+        "y",
+        "n",
+        "reminder",
+        "notify",
+        "notification",
+        "remind",
+        "before appointment"
+      ],
+      "answers": ["Do you want to confirm the appointment?"],
+      "next_expectation": "confirm"
+    },
+    {
+      "intent_name": "confirm",
+      "keywords": [
+        "yes",
+        "confirm",
+        "y",
+        "sure",
+        "book",
+        "schedule",
+        "ok",
+        "okay"
+      ],
+      "answers": [
+        "Your appointment is booked. Do you want any further contact info?"
+      ],
+      "next_expectation": "end"
+    },
+    {
+      "intent_name": "end",
+      "keywords": [
+        "yes",
+        "y",
+        "sure",
+        "contact info",
+        "more info",
+        "details",
+        "information",
+        "contact details",
+        "phone",
+        "email"
+      ],
+      "answers": [
+        "If you have more queries, contact our customer service at +49 1597898563 or customer@munichcityhospital.com. Thank you for booking. See you soon!"
+      ],
+      "next_expectation": "start"
+    }
+  ]
+}

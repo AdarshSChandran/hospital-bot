@@ -1,0 +1,18 @@
+.introComponent {
+  /* border: 1px solid white; */
+  padding: 40px;
+  margin-top: 230px;
+  background-color: #de2e7d;
+  color: white;
+  border-radius: 18px;
+}
+
+.introComponent:hover {
+  background-color: #ff0073;
+  cursor: pointer;
+}
+
+.introText {
+  letter-spacing: 0.4px;
+  word-spacing: 0.5px;
+}
